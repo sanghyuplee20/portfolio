@@ -9,6 +9,8 @@ import summit_image from "../public/images/summit.png";
 import cv_image from "../public/images/cv.png";
 import pintos_image from "../public/images/pintos.png";
 import noori_image from "../public/images/noori.png";
+import q2l_image from "../public/images/q2l.png"
+import delineo_image from "../public/images/delineo.png";
 import {
   Timeline,
   TimelineContent,
@@ -129,7 +131,29 @@ useEffect(() => {
       image: noori_image,
       imageAlt: "NooriAI Project Image",
       techStack: ["MarianNMT", "React Native", "Vosk Model"],
+      projectStatus: "planned" as "completed" | "in-progress" | "planned",
+    },
+    {
+      title: "Quest2Learn",
+      description:
+        "A 3D educational augmented lab for students",
+      image: q2l_image,
+      imageAlt: "Quest2Learn Project Image",
+      techStack: ["React", "ThreeJS"],
+      liveURL:
+        "https://www.q2l.app/",
       projectStatus: "in-progress" as "completed" | "in-progress" | "planned",
+    },
+    {
+      title: "Delineo Disease Model",
+      description:
+        "COVID-19 disease model for predicting disease progression",
+      image: delineo_image,
+      imageAlt: "Delineo Disease Model Project Image",
+      techStack: ["Python", "NumPy", "Pandas", "Matplotlib"],
+      liveURL:
+        "https://delineo.me/",
+      projectStatus: "completed" as "completed" | "in-progress" | "planned",
     },
     {
       title: "HOTACO",
@@ -382,7 +406,7 @@ const experience = [
               <h2 className="text-3xl font-bold text-[#f0a04b]">Experience</h2>
               <Timeline defaultValue={3}>
                 {experience.map((item) => (
-                  <TimelineItem key={item.id} step={item.id}>
+                  <TimelineItem key={item.id} step={item.id} className="cursor-target">
                     <TimelineHeader>
                       <TimelineSeparator />
                       <TimelineDate>{item.date}</TimelineDate>
