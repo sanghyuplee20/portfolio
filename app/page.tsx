@@ -1,7 +1,7 @@
 "use client";
 
 import TargetCursor from "@/components/TargetCursor";
-import HeroLeft from "@/components/Content";
+import Content from "@/components/Content";
 
 import { JetBrains_Mono } from 'next/font/google'
 
@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className={`flex flex-col items-center justify-center min-h-screen ${jetbrainsMono.className}`}>
       <TargetCursor spinDuration={2} hideDefaultCursor={true} />
-      <HeroLeft/>
+      <Content/>
     </div>
   );
 }
