@@ -29,9 +29,9 @@ const Card: React.FC<CardProps> = ({
     if (!projectStatus) return null;
     
     const statusColors = {
-      completed: "dark:bg-green-900/30 dark:text-green-300 dark:ring-green-500/20",
-      "in-progress": "dark:bg-blue-900/30 dark:text-blue-300 dark:ring-blue-500/20", 
-      planned: "dark:bg-gray-700/30 dark:text-gray-300 dark:ring-gray-500/20"
+      completed: "bg-green-50 text-green-700 ring-green-600/20 dark:bg-green-900/30 dark:text-green-300 dark:ring-green-500/20",
+      "in-progress": "bg-blue-50 text-blue-700 ring-blue-600/20 dark:bg-blue-900/30 dark:text-blue-300 dark:ring-blue-500/20", 
+      planned: "bg-gray-50 text-gray-700 ring-gray-600/20 dark:bg-gray-700/30 dark:text-gray-300 dark:ring-gray-500/20"
     };
     
     return (

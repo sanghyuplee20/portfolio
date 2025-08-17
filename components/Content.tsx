@@ -9,33 +9,79 @@ import summit_image from "../public/images/summit.png";
 import cv_image from "../public/images/cv.png";
 import pintos_image from "../public/images/pintos.png";
 import noori_image from "../public/images/noori.png";
+import {
+  Timeline,
+  TimelineContent,
+  TimelineDate,
+  TimelineHeader,
+  TimelineIndicator,
+  TimelineItem,
+  TimelineSeparator,
+  TimelineTitle,
+} from "@/components/ui/timeline";
 
 export default function Content() {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState("about");
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-            setActiveSection(entry.target.id);
-          }
-        });
-      },
-      {
-        threshold: [0.5],
-        rootMargin: "-20% 0px -20% 0px",
+useEffect(() => {
+  const sections = Array.from(document.querySelectorAll<HTMLElement>("section[id]"));
+
+  const thresholds = Array.from({ length: 101 }, (_, i) => i / 100);
+
+  let currentId = activeSection;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((e) => e.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length > 0) {
+        const topId = (visible[0].target as HTMLElement).id;
+        if (topId !== currentId) {
+          currentId = topId;
+          setActiveSection(topId);
+        }
+      } else {
+        const mid = window.innerHeight / 2;
+        const best = sections
+          .map((el) => ({
+            id: el.id,
+            d: Math.abs(el.getBoundingClientRect().top - mid),
+          }))
+          .sort((a, b) => a.d - b.d)[0];
+
+        if (best && best.id !== currentId) {
+          currentId = best.id;
+          setActiveSection(best.id);
+        }
       }
-    );
+    },
+    {
+      root: null,
+      rootMargin: "-20% 0px -60% 0px",
+      threshold: thresholds,
+    }
+  );
 
-    const sections = document.querySelectorAll("section[id]");
-    sections.forEach((section) => observer.observe(section));
+  sections.forEach((s) => observer.observe(s));
 
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
-  }, []);
+  const init = () => {
+    const mid = window.innerHeight / 2;
+    const best = sections
+      .map((el) => ({
+        id: el.id,
+        d: Math.abs(el.getBoundingClientRect().top - mid),
+      }))
+      .sort((a, b) => a.d - b.d)[0];
+    if (best) setActiveSection(best.id);
+  };
+  init();
+
+  return () => observer.disconnect();
+}, []);
+
 
   // Dark mode
   useEffect(() => {
@@ -111,8 +157,38 @@ export default function Content() {
     },
   ];
 
+const experience = [
+  {
+    id: 1,
+    date: "July 2023 - Aug 2023",
+    title: "MinTech",
+    description: "Built a Flutter app profile page and collaborated with Yonsei University on exercise research.",
+  },
+  {
+    id: 2,
+    date: "Jun 2024 - Aug 2024",
+    title: "Samsung SDS",
+    description: "Improved RPA solutions by applying prompt engineering and vector search with curated data.",
+  },
+  {
+    id: 3,
+    date: "May 2025 - Aug 2025",
+    title: "Oracle",
+    description: "Developed an AI-powered code search and chat agent that increased query accuracy by 60%.",
+  },
+  {
+    id: 4,
+    date: "Feb 2025 – Present",
+    title: "NooriAI",
+    description: "Co-founded a healthcare startup building HIPAA-compliant real-time medical translation tools.",
+  },
+];
+
+
+
   const navigationItems = [
     { name: "About", href: "#about" },
+    { name: "Experience", href: "#experience" },
     { name: "Projects", href: "#projects" },
   ];
 
@@ -124,12 +200,12 @@ export default function Content() {
     },
     {
       name: "LinkedIn",
-      href: "https://linkedin.com/in/sanghyuplee",
+      href: "https://www.linkedin.com/in/sanghyuplee20/",
       icon: Linkedin,
     },
     {
       name: "Email",
-      href: "mailto:slee283@jhu.edu",
+      href: "mailto:shlee121401@gmail.com",
       icon: Mail,
     },
   ];
@@ -164,7 +240,7 @@ export default function Content() {
                       as="span"
                       texts={[
                         "Software Developer",
-                        "Machine Learning Engineer", 
+                        "Machine Learning Engineer",
                         "Full Stack Developer",
                         "Food Enthusiast",
                       ]}
@@ -175,7 +251,11 @@ export default function Content() {
                       exit={{ y: "-120%" }}
                       staggerDuration={0.025}
                       splitLevelClassName="overflow-hidden pb-1"
-                      transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                      transition={{
+                        type: "spring",
+                        damping: 30,
+                        stiffness: 400,
+                      }}
                       rotationInterval={2000}
                     />
                   </motion.p>
@@ -218,8 +298,14 @@ export default function Content() {
                     <a
                       key={link.name}
                       href={link.href}
-                      target={link.href.startsWith('mailto:') ? '_self' : '_blank'}
-                      rel={link.href.startsWith('mailto:') ? undefined : 'noopener noreferrer'}
+                      target={
+                        link.href.startsWith("mailto:") ? "_self" : "_blank"
+                      }
+                      rel={
+                        link.href.startsWith("mailto:")
+                          ? undefined
+                          : "noopener noreferrer"
+                      }
                       className="p-3 rounded-lg bg-gray-100 dark:bg-[#2b2d31] hover:bg-[#f0a04b] hover:text-white transition-all duration-300 group cursor-target text-gray-600 dark:text-gray-300"
                       aria-label={link.name}
                     >
@@ -242,7 +328,7 @@ export default function Content() {
                 )}
               </button>
             </div>
-            
+
             <p className="text-sm text-gray-500 dark:text-gray-400">
               © 2025 Sang Hyup Lee
             </p>
@@ -262,10 +348,12 @@ export default function Content() {
                   <span className="text-5xl">👨‍💻</span>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                     I am a passionate{" "}
-                    <span className="text-[#f0a04b] font-semibold">problem solver</span> located in
-                    United States, with a strong background in software development
-                    and machine learning. I love learning new technologies and
-                    applying them to real world problems.
+                    <span className="text-[#f0a04b] font-semibold">
+                      problem solver
+                    </span>{" "}
+                    located in United States, with a strong background in
+                    software development and machine learning. I love learning
+                    new technologies and applying them to real world problems.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                     I currently study at{" "}
@@ -280,11 +368,31 @@ export default function Content() {
                     pursuing a Bachelor&apos;s of Science in Computer Science.
                   </p>
                   <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                    Outside of tech, you can find me at a local restaurant trying out
-                    new dishes.
+                    Outside of tech, you can find me at a local restaurant
+                    trying out new dishes.
                   </p>
                 </div>
               </div>
+            </div>
+          </section>
+
+          {/* Experience Section */}
+          <section id="experience" className="scroll-mt-8">
+            <div className="flex flex-col gap-8">
+              <h2 className="text-3xl font-bold text-[#f0a04b]">Experience</h2>
+              <Timeline defaultValue={3}>
+                {experience.map((item) => (
+                  <TimelineItem key={item.id} step={item.id}>
+                    <TimelineHeader>
+                      <TimelineSeparator />
+                      <TimelineDate>{item.date}</TimelineDate>
+                      <TimelineTitle>{item.title}</TimelineTitle>
+                      <TimelineIndicator />
+                    </TimelineHeader>
+                    <TimelineContent>{item.description}</TimelineContent>
+                  </TimelineItem>
+                ))}
+              </Timeline>
             </div>
           </section>
 
