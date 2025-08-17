@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import TextRotate from "@/components/fancy/text/text-rotate";
 import { LayoutGroup, motion } from "motion/react";
-import { Github, Linkedin, Mail, Sun, Moon } from "lucide-react";
+import { Github, Linkedin, Mail, Sun, Moon, FileText, Newspaper } from "lucide-react";
 import Card from "./Card";
 import summit_image from "../public/images/summit.png";
 import cv_image from "../public/images/cv.png";
@@ -231,6 +231,11 @@ const experience = [
       name: "Email",
       href: "mailto:shlee121401@gmail.com",
       icon: Mail,
+    },
+    {
+      name: "Resume",
+      href: "/file/Sanghyup_Lee_Resume.pdf",
+      icon: FileText,
     },
   ];
 
