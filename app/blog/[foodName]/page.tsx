@@ -1,18 +1,26 @@
 
 import React from "react";
-
+import { promises as fs } from 'fs'; 
 
  type PageProps = {
     params: Promise<{ foodName: string }>;
 };
 
 async function Page({ params }: PageProps) {
+  const file = await fs.readFile(process.cwd() + '/app/blog/blogs.json', 'utf8');
+  const foodData = JSON.parse(file);
   const { foodName } = await params;
-  console.log("Food Name:", foodName);
+
+  if (!foodData[foodName]) {
+    return <div>Food not found</div>;
+  }
+
+  const foodDetails = foodData[foodName];
+  
   return (
     <div>
-      <h1>Food: {foodName}</h1>
-      <p>This is the page for {foodName}.</p>
+      <h1>Food: {foodDetails.name}</h1>
+      <p>{foodDetails.comment}</p>
     </div>
   );
 }

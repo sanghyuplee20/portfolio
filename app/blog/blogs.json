@@ -1,0 +1,28 @@
+{
+    "vietnamese_style_pasta": {
+        "name": "Vietnamese Style Pasta",
+        "recipe": [
+            "coin size spaghetti",
+            "1 tsp soy sauce",
+            "1 tsp fish sauce",
+            "1 tsp chicken stock powder",
+            "1 liter water",
+            "1 tbsp salt",
+            "4 cloves garlic",
+            "2 tbsp butter"
+        ],
+        "instructions": [
+            "1. Cook spaghetti in a liter of boiling water with a tablespoon of salt right before al dente (usually 2 minutes less than the package instructions).",
+            "2. In a pan, melt 1 tbsp of butter and sauté minced garlic until fragrant.",
+            "3. Add soy sauce, fish sauce, and chicken stock powder to the pan. If it feels dry, add a bit of pasta water.",
+            "4. Toss the cooked spaghetti in the sauce and coat the noodles.",
+            "5. When the sauce is well mixed, remove it from the heat and begin to mantecatura with a tbsp of butter.",
+            "6. When the sauces thicken, serve hot."
+        ],
+        "image": "",
+        "rating": 4,
+        "difficulty": "easy",
+        "comment": "This is a pretty good and simple dish."
+
+    }
+}
