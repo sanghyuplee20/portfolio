@@ -1,7 +1,12 @@
 
 import React from "react";
 
-async function Page({ params }: { params: { foodName: string } }) {
+
+ type PageProps = {
+    params: Promise<{ foodName: string }>;
+};
+
+async function Page({ params }: PageProps) {
   const { foodName } = await params;
   console.log("Food Name:", foodName);
   return (
