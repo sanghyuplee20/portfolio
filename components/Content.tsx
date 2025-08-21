@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import TextRotate from "@/components/fancy/text/text-rotate";
 import { LayoutGroup, motion } from "motion/react";
-import { Github, Linkedin, Mail, Sun, Moon, FileText, Newspaper } from "lucide-react";
+import { Github, Linkedin, Mail, Sun, Moon, FileText, CookingPot } from "lucide-react";
 import Card from "./Card";
 import summit_image from "../public/images/summit.png";
 import cv_image from "../public/images/cv.png";
@@ -237,6 +237,11 @@ const experience = [
       href: "/file/Sanghyup_Lee_Resume.pdf",
       icon: FileText,
     },
+    {
+      name: "Blog",
+      href: "/blog",
+      icon: CookingPot,
+    },
   ];
 
   const scrollToSection = (href: string) => {
@@ -328,7 +333,7 @@ const experience = [
                       key={link.name}
                       href={link.href}
                       target={
-                        link.href.startsWith("mailto:") ? "_self" : "_blank"
+                        link.href.startsWith("mailto:") || link.href.startsWith("/blog") ? "_self" : "_blank"
                       }
                       rel={
                         link.href.startsWith("mailto:")
