@@ -6,7 +6,7 @@ import { promises as fs } from 'fs';
     params: Promise<{ foodName: string }>;
 };
 
-async function Page({ params }: PageProps) {
+async function FoodPage({ params }: PageProps) {
   const file = await fs.readFile(process.cwd() + '/app/blog/blogs.json', 'utf8');
   const foodData = JSON.parse(file);
   const { foodName } = await params;
@@ -26,4 +26,4 @@ async function Page({ params }: PageProps) {
 }
 
 
-export default Page;
+export default FoodPage;
