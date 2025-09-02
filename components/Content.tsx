@@ -298,7 +298,7 @@ const experience = [
             </div>
 
             {/* Navigation */}
-            <nav className="flex flex-col gap-4">
+            <nav className="hidden lg:flex flex-col gap-4">
               {navigationItems.map((item) => {
                 const isActive = activeSection === item.href.substring(1);
                 return (
@@ -322,7 +322,7 @@ const experience = [
             </nav>
           </div>
 
-          <div className="flex flex-col gap-6 pt-8 border-t border-gray-200 dark:border-[#404249]">
+          <div className="flex flex-col gap-6 pt-8 lg:border-t border-gray-200 dark:border-[#404249]">
             <div className="flex items-center justify-between">
               {/* Social Links */}
               <div className="flex gap-4">
@@ -343,7 +343,7 @@ const experience = [
                       className="p-3 rounded-lg bg-gray-100 dark:bg-[#2b2d31] hover:bg-[#f0a04b] hover:text-white transition-all duration-300 group cursor-target text-gray-600 dark:text-gray-300"
                       aria-label={link.name}
                     >
-                      <IconComponent className="w-5 h-5" />
+                     <IconComponent className="w-4 h-4 lg:w-5 lg:h-5" />
                     </a>
                   );
                 })}
@@ -356,9 +356,9 @@ const experience = [
                 aria-label="Toggle dark mode"
               >
                 {isDarkMode ? (
-                  <Sun className="w-5 h-5 text-yellow-500" />
+                  <Sun className="w-4 h-4 lg:w-5 lg:h-5 text-yellow-500" />
                 ) : (
-                  <Moon className="w-5 h-5 text-gray-600" />
+                  <Moon className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600" />
                 )}
               </button>
             </div>
