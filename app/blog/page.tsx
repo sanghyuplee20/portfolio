@@ -2,7 +2,6 @@ import { promises as fs } from "fs";
 import BlogClient from "./BlogClient";
 import { JetBrains_Mono } from "next/font/google";
 import BackButton from "./BackButton";
-import { Sun, Moon } from "lucide-react"
 
 const jetbrainsMono = JetBrains_Mono({
 	subsets: ["latin"],
