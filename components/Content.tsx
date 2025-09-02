@@ -307,7 +307,7 @@ export default function Content() {
 		},
 		{
 			name: "Blog",
-			href: "/blog",
+			href: "/blogs",
 			icon: CookingPot,
 		},
 	];

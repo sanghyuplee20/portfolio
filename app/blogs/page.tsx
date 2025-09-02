@@ -11,7 +11,7 @@ const jetbrainsMono = JetBrains_Mono({
 
 export default async function Blog() {
 	const file = await fs.readFile(
-		process.cwd() + "/app/blog/blogs.json",
+		process.cwd() + "/app/blogs/blogs.json",
 		"utf8"
 	);
 	const foodData = JSON.parse(file);
