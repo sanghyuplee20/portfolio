@@ -4,10 +4,27 @@ import { JetBrains_Mono } from "next/font/google";
 import Image from "next/image";
 import BackButton from "../BackButton";
 import { Badge } from "@/components/ui/badge";
+import blogData from "@/app/blogs/blogs.json";
 
 type PageProps = {
 	params: Promise<{ foodName: string }>;
 };
+
+interface Blog {
+  name: string;
+  recipe: string[];
+  instructions: string[];
+  image: string;
+  rating: number;
+  difficulty: string;
+  comment: string;
+  prep_time: string;
+  servings: number;
+}
+
+type Blogs = Record<string, Blog>;
+
+const foodData = blogData as Blogs;
 
 const jetbrainsMono = JetBrains_Mono({
 	subsets: ["latin"],
@@ -16,12 +33,6 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 async function FoodPage({ params }: PageProps) {
-	const file = await fs.readFile(
-		process.cwd() + "/app/blogs/blogs.json",
-		"utf8"
-	);
-
-	const foodData = JSON.parse(file);
 	const { foodName } = await params;
 
 	if (!foodData[foodName]) {
