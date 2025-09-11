@@ -188,6 +188,7 @@ export default function Content() {
 			image: noori_image,
 			imageAlt: "NooriAI Project Image",
 			techStack: ["MarianNMT", "React Native", "Vosk Model"],
+			liveURL: "https://www.nooriai.com/",
 			projectStatus: "planned" as "completed" | "in-progress" | "planned",
 		},
 		{
