@@ -19,6 +19,7 @@ import pintos_image from "../public/images/pintos.png";
 import noori_image from "../public/images/noori.png";
 import q2l_image from "../public/images/q2l.png";
 import delineo_image from "../public/images/delineo.png";
+import dom_image from "../public/images/dom.png";
 import {
 	Timeline,
 	TimelineContent,
@@ -160,6 +161,26 @@ export default function Content() {
 	};
 
 	const projects = [
+		{
+			title: "DOM",
+			description:
+				"An agentic chrome extension for accessible browser navigation",
+			image: dom_image,
+			imageAlt: "Summit Project Image",
+			techStack: [
+				"Gemini",
+				"HTML/CSS/JS",
+				"LangGraph",
+				"FastAPI",
+			],
+			repositoryURL: "https://github.com/sanghyuplee20/Dom",
+			liveURL: "https://devpost.com/software/dom-hands-free-web-accessibility-for-people-with-disability",
+			liveName: "Devpost Link",
+			projectStatus: "completed" as
+				| "completed"
+				| "in-progress"
+				| "planned",
+		},
 		{
 			title: "Summit",
 			description:
