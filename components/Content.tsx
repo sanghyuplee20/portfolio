@@ -208,9 +208,9 @@ export default function Content() {
 				"Medical Interpreter for Limited English Proficiency Patients",
 			image: noori_image,
 			imageAlt: "NooriAI Project Image",
-			techStack: ["MarianNMT", "React Native", "Vosk Model"],
+			techStack: ["MarianNMT", "React Native", "Vosk Model", "I-Corps"],
 			liveURL: "https://www.nooriai.com/",
-			projectStatus: "planned" as "completed" | "in-progress" | "planned",
+			projectStatus: "in-progress" as "completed" | "in-progress" | "planned",
 		},
 		{
 			title: "Quest2Learn",
