@@ -211,7 +211,7 @@ export default function Content() {
 			techStack: ["MarianNMT", "React Native", "Vosk Model", "I-Corps"],
 			liveURL: "https://www.nooriai.com/",
 			projectStatus: "in-progress" as "completed" | "in-progress" | "planned",
-		},
+		},	
 		{
 			title: "Quest2Learn",
 			description: "A 3D educational augmented lab for students",
