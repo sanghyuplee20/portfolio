@@ -324,7 +324,7 @@ export default function Content() {
 		},
 		{
 			name: "Resume",
-			href: "/file/Sanghyup_Lee_Resume.pdf",
+			href: "/file/Shawn_Lee_Resume_FullTime.pdf",
 			icon: FileText,
 		},
 		{
