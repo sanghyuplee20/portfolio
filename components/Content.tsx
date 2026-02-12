@@ -10,7 +10,7 @@ import {
 	Sun,
 	Moon,
 	FileText,
-	CookingPot,
+	NotebookPen,
 } from "lucide-react";
 import Card from "./Card";
 import summit_image from "../public/images/summit.png";
@@ -324,13 +324,13 @@ export default function Content() {
 		},
 		{
 			name: "Resume",
-			href: "/file/Shawn_Lee_Resume_FullTime.pdf",
+			href: "/file/Shawn_Lee_Resume.pdf",
 			icon: FileText,
 		},
 		{
 			name: "Blog",
 			href: "/blogs",
-			icon: CookingPot,
+			icon: NotebookPen,
 		},
 	];
 
