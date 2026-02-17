@@ -1,5 +1,8 @@
 import { JetBrains_Mono } from "next/font/google";
 import BackButton from "../BackButton";
+import Image from "next/image";
+import Link from "next/link";
+import ComesInGoesOutUnderline from "@/components/fancy/text/underline-comes-in-goes-out";
 
 const jetbrainsMono = JetBrains_Mono({
 	subsets: ["latin"],
@@ -29,6 +32,13 @@ export default function PersonalBlog() {
 					<h2 className="text-2xl text-[#f0a04b] mb-2">
 						Who Am I?
 					</h2>
+					<Image
+						src="/images/improv/introduction.JPG"
+						alt="Shawn at improv"
+						width={600}
+						height={400}
+						className="rounded-2xl mb-4 w-full max-w-md object-cover"
+					/>
 					<p>
 						Hi, I&apos;m Sang Hyup, but most people call me Shawn.
 						I&apos;m a computer science student at Johns Hopkins
@@ -162,6 +172,26 @@ export default function PersonalBlog() {
 						next.
 					</p>
 				</div>
+			</div>
+			<div>
+				<h2 className="text-2xl text-[#f0a04b] mb-4">
+					Blog Posts
+				</h2>
+				<ul className="flex flex-col gap-3">
+					<li>
+						<Link
+							href="/blogs/personal_blog/blog_1"
+							className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-[#f0a04b] dark:hover:text-[#f0a04b] transition-colors duration-200"
+						>
+							<span className="text-[#f0a04b] font-semibold text-sm">
+								01
+							</span>
+							<ComesInGoesOutUnderline>
+								The First Scene
+							</ComesInGoesOutUnderline>
+						</Link>
+					</li>
+				</ul>
 			</div>
 		</div>
 	);

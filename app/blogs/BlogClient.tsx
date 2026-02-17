@@ -12,7 +12,7 @@ export default function BlogClient({ foodData }: { foodData: FoodData }) {
 	return (
 		<ul className="gap-2 text-black dark:text-white text-lg sm:text-l lg:text-xl flex flex-col">
 			<li>
-				<Link href="/blogs/personalBlog">
+				<Link href="/blogs/personal_blog">
 					<ComesInGoesOutUnderline>
 						Compile, Run, Improvise
 					</ComesInGoesOutUnderline>
