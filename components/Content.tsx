@@ -20,6 +20,7 @@ import noori_image from "../public/images/noori.png";
 import q2l_image from "../public/images/q2l.png";
 import delineo_image from "../public/images/delineo.png";
 import dom_image from "../public/images/dom.png";
+import golf_image from "../public/images/golf.png";
 import {
 	Timeline,
 	TimelineContent,
@@ -161,26 +162,7 @@ export default function Content() {
 	};
 
 	const projects = [
-		{
-			title: "DOM",
-			description:
-				"An agentic chrome extension for accessible browser navigation",
-			image: dom_image,
-			imageAlt: "Summit Project Image",
-			techStack: [
-				"Gemini",
-				"HTML/CSS/JS",
-				"LangGraph",
-				"FastAPI",
-			],
-			repositoryURL: "https://github.com/sanghyuplee20/Dom",
-			liveURL: "https://devpost.com/software/dom-hands-free-web-accessibility-for-people-with-disability",
-			liveName: "Devpost Link",
-			projectStatus: "completed" as
-				| "completed"
-				| "in-progress"
-				| "planned",
-		},
+		// --- Completed (ranked by importance) ---
 		{
 			title: "Summit",
 			description:
@@ -203,23 +185,21 @@ export default function Content() {
 				| "planned",
 		},
 		{
-			title: "NooriAI",
+			title: "DOM",
 			description:
-				"Medical Interpreter for Limited English Proficiency Patients",
-			image: noori_image,
-			imageAlt: "NooriAI Project Image",
-			techStack: ["MarianNMT", "React Native", "Vosk Model", "I-Corps"],
-			liveURL: "https://www.nooriai.com/",
-			projectStatus: "in-progress" as "completed" | "in-progress" | "planned",
-		},	
-		{
-			title: "Quest2Learn",
-			description: "A 3D educational augmented lab for students",
-			image: q2l_image,
-			imageAlt: "Quest2Learn Project Image",
-			techStack: ["React", "ThreeJS"],
-			liveURL: "https://www.q2l.app/",
-			projectStatus: "in-progress" as
+				"An agentic chrome extension for accessible browser navigation",
+			image: dom_image,
+			imageAlt: "Summit Project Image",
+			techStack: [
+				"Gemini",
+				"HTML/CSS/JS",
+				"LangGraph",
+				"FastAPI",
+			],
+			repositoryURL: "https://github.com/sanghyuplee20/Dom",
+			liveURL: "https://devpost.com/software/dom-hands-free-web-accessibility-for-people-with-disability",
+			liveName: "Devpost Link",
+			projectStatus: "completed" as
 				| "completed"
 				| "in-progress"
 				| "planned",
@@ -254,6 +234,16 @@ export default function Content() {
 				| "planned",
 		},
 		{
+			title: "AR Golf",
+			description:
+				"An augmented reality golf game built with Unity and Meta Quest",
+			image: golf_image,
+			imageAlt: "AR Golf Project Image",
+			techStack: ["Unity", "Meta Quest"],
+			repositoryURL: "https://github.com/yoohyukchang/AR-minigolf",
+			projectStatus: "completed" as "completed" | "in-progress" | "planned",
+		},
+		{
 			title: "pintOS",
 			description: "An educational operating system project",
 			image: pintos_image,
@@ -263,6 +253,29 @@ export default function Content() {
 				"https://jhuopsys.github.io/spring2025/assign/pintos/pintos.html",
 			liveName: "View Description",
 			projectStatus: "completed" as
+				| "completed"
+				| "in-progress"
+				| "planned",
+		},
+		// --- In-Progress ---
+		{
+			title: "NooriAI",
+			description:
+				"Medical Interpreter for Limited English Proficiency Patients",
+			image: noori_image,
+			imageAlt: "NooriAI Project Image",
+			techStack: ["MarianNMT", "React Native", "Vosk Model", "I-Corps"],
+			liveURL: "https://www.nooriai.com/",
+			projectStatus: "in-progress" as "completed" | "in-progress" | "planned",
+		},
+		{
+			title: "Quest2Learn",
+			description: "A 3D educational augmented lab for students",
+			image: q2l_image,
+			imageAlt: "Quest2Learn Project Image",
+			techStack: ["React", "ThreeJS"],
+			liveURL: "https://www.q2l.app/",
+			projectStatus: "in-progress" as
 				| "completed"
 				| "in-progress"
 				| "planned",
