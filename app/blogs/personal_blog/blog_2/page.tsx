@@ -29,15 +29,6 @@ export default function Blog2() {
                 {/* Intro */}
                 <div>
                     <p>
-                        Welcome back to <span className="text-[#f0a04b] font-semibold">Compile, Run, Improvise</span>.
-                        We&apos;ve covered a good amount of ground since the last time we were here, and I&apos;m
-                        excited to share what I&apos;ve discovered about risk-taking and flexibility. If Blog #1 was
-                        about walking into the room and just trying to survive, Blog #2 is about what happens when
-                        you stop surviving and start actually playing. Spoiler: it&apos;s messier, scarier, and
-                        somehow a lot more fun.
-                    </p>
-                    <br />
-                    <p>
                         In my first blog, I talked about the Carnegie Hall stage fright that never quite left me,
                         about how I kept pressuring myself to be funny instead of just being present. Since then,
                         I&apos;ve been slowly learning to let go of that pressure. This blog is about what gets
@@ -48,54 +39,65 @@ export default function Blog2() {
                 {/* Prompt 1 */}
                 <div>
                     <h2 className="text-2xl text-[#f0a04b] mb-2">
-                        Adaptability: When the Scene Runs Away From You
+                        Adaptability: The Boxing Match I Didn&apos;t Script
                     </h2>
                     <p>
-                        There was a scene a few weeks in that I still think about. My partner and I were
-                        supposed to set up a simple two-person scene — I had this whole quiet arc in my head:
-                        two coworkers in an office, a mundane disagreement, maybe something about a broken
-                        printer. Very safe. Very planned. Very me.
+                        There was an exercise where we had to build a scene together in real time —
+                        accepting whatever happened, and applauding when someone made a mistake instead of
+                        treating it like a failure. My expectation going in was straightforward: I was going
+                        to be a good scene partner. I was going to use &quot;Yes, and.&quot; I was going to
+                        listen and build. I had basically pre-loaded the algorithm.
                     </p>
                     <br />
                     <p>
-                        About ten seconds in, my partner grabbed an invisible object from the air and announced,
-                        &quot;The satellite dish is picking up something. Captain, do you hear that?&quot;
-                        We were now in space. On a ship. I was apparently a captain.
+                        Then the scene started, and everyone just stood there. Silence. Nobody moved.
+                        As someone who hates dead air even more than awkward air, I made the first move:
+                        I pointed at Ben and Paul and declared them opponents in a boxing match.
+                        That part felt fine — I was still in control, I had set the stage.
                     </p>
                     <br />
                     <p>
-                        My first instinct — and I felt it physically, like a system error — was to freeze.
-                        The scene I had mentally compiled wasn&apos;t running anymore. There was no office,
-                        no printer, no familiar coordinates. For about a half-second, I stood there doing the
-                        improv equivalent of a spinning loading icon.
+                        What I hadn&apos;t planned for was what came next. Once Ben started throwing punches at Paul,
+                        the scene locked me into the role of live commentator. Every move they made,
+                        I had to narrate out loud, in real time, with energy — like a ringside announcer
+                        who had no idea what either fighter was about to do.
                     </p>
                     <br />
                     <p>
-                        Then something clicked. I took the offer. &quot;Signal confirmed. We need to move.&quot;
-                        And from there, the scene wrote itself. My partner had given me a world; I just had to
-                        stop mourning the one I&apos;d planned and walk into the new one.
+                        And then they started making moves I genuinely did not expect. A dramatic stumble.
+                        A slow-motion dodge. A completely unreadable pause. I froze.
+                        Not for long — maybe a second — but I felt it. That familiar loading screen.
+                        My brain was waiting for input that matched its model, and the input wasn&apos;t coming.
                     </p>
                     <br />
                     <p>
-                        What I learned about myself: I don&apos;t fail at adapting because I can&apos;t think
-                        quickly. I fail because I spend too long attached to what I <em>already</em> thought.
-                        The bottleneck isn&apos;t processing speed — it&apos;s letting go. That half-second
-                        freeze wasn&apos;t confusion; it was grief for a scene that didn&apos;t exist anymore.
-                        Once I learned to treat my partner&apos;s unexpected moves as gifts instead of
-                        disruptions, the creativity came naturally.
+                        What I learned about myself in that moment was specific: my adaptability breaks down
+                        not when things get hard, but when I&apos;m the one who set up the premise.
+                        I had created the scene, so I felt responsible for controlling it — and the second
+                        it slipped out of my control, I hesitated. The irony is that I was the one who
+                        made everyone else be unpredictable. I just didn&apos;t expect to be surprised
+                        by my own setup.
+                    </p>
+                    <br />
+                    <p>
+                        Under pressure, my creativity doesn&apos;t disappear — it gets cautious. I start
+                        reaching for the &quot;correct&quot; call instead of just making one. That freeze
+                        wasn&apos;t a lack of ideas; it was me auditing the ideas too fast.
+                        The lesson I took away: commit to the call. The wrong commentary said confidently
+                        is better than silence. The scene doesn&apos;t need accuracy — it needs momentum.
                     </p>
                     <br />
                     <figure className="mb-4">
                         <Image
-                            src="/images/improv/panik.jpg"
-                            alt="Panik Kalm meme — the moment your scene partner takes things off-script"
+                            src="/images/improv/boxing.jpg"
+                            alt="Boxing match — the scene that taught me to commentate without a script"
                             width={300}
-                            height={300}
+                            height={200}
                             className="rounded-2xl w-full max-w-xs object-cover"
                         />
                         <figcaption className="text-xs text-gray-400 dark:text-gray-500 mt-2 italic">
-                            That half-second between &quot;we&apos;re in space now&quot; and &quot;okay, I&apos;m a captain&quot;
-                            — captured perfectly.
+                            Ben vs. Paul — the fight I started but couldn&apos;t control. Every unexpected
+                            move was a live test of whether I could adapt in real time.
                         </figcaption>
                     </figure>
                 </div>
@@ -103,96 +105,146 @@ export default function Blog2() {
                 {/* Prompt 2 */}
                 <div>
                     <h2 className="text-2xl text-[#f0a04b] mb-2">
-                        Adaptability in My Career: Saying Yes to the Pivot
+                        Adaptability in My Career: Accepting the AI Offer
                     </h2>
                     <p>
-                        I&apos;m a CS student and a startup co-founder. Both of those identities revolve around
-                        planning — system architecture, sprint cycles, product roadmaps. The irony is that
-                        the moments that have mattered most in my startup have been the ones where
-                        the plan broke down.
+                        I started college in 2020 as a freshman. There was no AI to speak of, only COVID.
+                        Debugging meant going to office hours, spending hours tracing through logic by hand,
+                        figuring out one slow line at a time whether I was even approaching the problem right.
+                        That was the landscape I built my understanding of software on.
                     </p>
                     <br />
                     <p>
-                        Here&apos;s a realistic scenario I could easily face: we&apos;re deep in a product demo
-                        for a potential investor, and halfway through, they stop us and say,
-                        &quot;I don&apos;t actually care about this feature. What I want to know is how you handle X.&quot;
-                        X wasn&apos;t on our deck. X wasn&apos;t something we&apos;d prepared for.
+                        Then I left for mandatory military service, eighteen months between 2021 and 2023.
+                        I was largely cut off from the technology world while I was serving. When I came back,
+                        ChatGPT was everywhere. Large language models could generate code, explain errors,
+                        draft entire functions in seconds. My first reaction was honest disbelief: there is
+                        no way a program can think through a problem better than a person who has studied
+                        this for years. I resisted it. I felt like accepting it would mean that what I had
+                        built, the hours at office hours, the slow hard-won understanding, was somehow worth less.
                     </p>
                     <br />
                     <p>
-                        The old version of me would have apologized and tried to redirect back to the script.
-                        The improv-trained version of me hears that as an offer. <span className="text-[#f0a04b] font-semibold">&quot;Yes, and&quot;</span> means
-                        accepting that the investor just told me exactly what they care about — and building
-                        from there. Presence means not checking mentally back to slide four. Accepting offers
-                        means treating that interruption not as a derailment but as the most valuable data
-                        point in the room.
+                        That resistance is exactly what improv teaches you to let go of.
+                        In a scene, when your partner introduces something unexpected, the instinct to
+                        protect your original idea is natural. But it kills the scene. The move is to say{" "}
+                        <span className="text-[#f0a04b] font-semibold">&quot;yes, and&quot;</span> — accept
+                        the new reality, and build from it. When I finally stopped defending what I already
+                        knew and started treating AI as an offer from the field, my whole approach shifted.
+                        I stopped asking &quot;does this replace me?&quot; and started asking &quot;what
+                        does this make possible?&quot;
                     </p>
                     <br />
                     <p>
-                        Research on workplace adaptability supports this directly. A study published in the
-                        <em> Journal of Applied Psychology</em> found that &quot;cognitive flexibility&quot; —
-                        the ability to shift mental frameworks quickly in response to new information —
-                        is one of the strongest predictors of performance in high-uncertainty environments
+                        The professional application is direct. As a CS student entering a field where the
+                        tools will keep changing, presence means staying focused on what the current moment
+                        actually requires instead of what I learned to do before. Accepting offers means
+                        treating every new technology, every new teammate with a different approach, every
+                        framework I have never touched, as something to build on rather than resist.
+                        The personal computers created an entire software industry. AI is doing the same thing.
+                        The engineers who will matter most are the ones who say yes to the scene as it is,
+                        not as they expected it to be.
+                    </p>
+                    <br />
+                    <p>
+                        Research on workplace adaptability supports this directly. A study published in
+                        <em> Ergonomics</em> found that cognitive flexibility, the ability to shift mental
+                        frameworks quickly in response to new information, is one of the strongest predictors
+                        of performance in high-uncertainty environments
                         <sup className="text-[#f0a04b] font-semibold ml-0.5">
                             <a href="#cite-2">2</a>
                         </sup>.
-                        That&apos;s exactly what improv trains. Every scene where my partner takes us to
-                        space is a rep. Every rep makes the pivot feel less like a failure and more like
-                        the actual job.
-                    </p>
-                </div>
-
-                {/* Prompt 3 */}
-                <div>
-                    <h2 className="text-2xl text-[#f0a04b] mb-2">
-                        A Risk I Actually Took: Co-founding a Startup
-                    </h2>
-                    <p>
-                        The most significant risk I&apos;ve taken in my professional life was deciding to
-                        co-found a startup during my sophomore year. Not &quot;I started a club&quot; or
-                        &quot;I applied to a competitive program.&quot; I mean: I committed time, energy,
-                        and a real stake in something that had no guarantee of working — and told people
-                        about it, which felt almost worse.
-                    </p>
-                    <br />
-                    <p>
-                        What made it genuinely risky wasn&apos;t the idea. It was the leap from
-                        &quot;I have a plan&quot; to &quot;I am executing without knowing the outcome.&quot;
-                        As an engineer, I&apos;m comfortable in systems where I can test, debug, and iterate
-                        in private. A startup doesn&apos;t give you that. You ship in public. You pitch in
-                        public. You fail, if you fail, in public. Every early conversation with potential
-                        users felt like an improv scene I hadn&apos;t rehearsed — which is exactly what it was.
-                    </p>
-                    <br />
-                    <p>
-                        The outcome was mixed in the way most real things are: some of what we built worked,
-                        some didn&apos;t, and the lessons were harder than the wins. But the most important
-                        thing I learned was that bold choices, even wrong ones, generate more information than
-                        safe non-choices. As the UCB Manual puts it, the scene only moves forward when
-                        someone makes a commitment —
-                        &quot;A strong choice is better than no choice&quot;{" "}
-                        <span className="text-[#f0a04b] text-sm italic">(UCB Manual, p. 52)</span>.
-                        Sitting on the idea for another semester would have been a refusal to make the scene
-                        move. Founding it was the choice that made everything else possible.
-                    </p>
-                    <br />
-                    <p>
-                        Looking back, the improv parallel is clear: trust, uncertainty, and the willingness
-                        to make a move before you&apos;re certain it&apos;s right. You can&apos;t play an
-                        improv scene from the sidelines. You can&apos;t build a company from the sidelines either.
+                        Every scene in class where I accept an unexpected offer instead of freezing is a rep
+                        for exactly that muscle.
                     </p>
                     <br />
                     <figure className="mb-4">
                         <Image
-                            src="/images/improv/soccer.jpg"
-                            alt="Committing to the shot — in soccer, in improv, and in startups"
+                            src="/images/improv/gptmeme.jpeg"
+                            alt="Meme about ChatGPT replacing programmers"
                             width={300}
                             height={200}
                             className="rounded-2xl w-full max-w-xs object-cover"
                         />
                         <figcaption className="text-xs text-gray-400 dark:text-gray-500 mt-2 italic">
-                            At some point, you stop dribbling and take the shot. Founding a startup
-                            felt exactly like that — committing before you can be certain.
+                            My exact reaction coming back from military service to find this everywhere.
+                            Eventually I had to accept the offer.
+                        </figcaption>
+                    </figure>
+                </div>
+
+                {/* Prompt 3 */}
+                <div>
+                    <h2 className="text-2xl text-[#f0a04b] mb-2">
+                        A Risk I Actually Took: Becoming President of KSA
+                    </h2>
+                    <p>
+                        The most significant risk I took in my academic life had nothing to do with code.
+                        I was nominated to become the president of the Korean Students Association at
+                        Johns Hopkins University, and I almost said no.
+                    </p>
+                    <br />
+                    <p>
+                        What made it risky was exactly this: every leadership role I had taken before was
+                        technical. I led projects. I wrote systems. I was the person who showed up with a
+                        plan and executed it quietly. Running an organization meant something completely
+                        different. It meant being the face of a community, making decisions that affected
+                        people, not code, and doing all of it in front of everyone. My biggest fear was
+                        not failure in private. It was letting down a community that trusted me publicly.
+                        I was worried that I would stand in front of a room and have nothing worth saying.
+                    </p>
+                    <br />
+                    <p>
+                        I took it anyway. I still remember the first executive board meeting I ran.
+                        My voice shook when I opened. I had prepared talking points, but the moment I
+                        started speaking, I could feel the weight of people actually listening, waiting
+                        to see what kind of leader I was going to be. That is not a feeling you can
+                        rehearse for. You just have to start talking and trust that something real will come.
+                    </p>
+                    <br />
+                    <p>
+                        Something did. I started speaking about what I genuinely cared about for the
+                        association, the things I wanted to build, the problems I wanted to fix. Not
+                        from a script, just from what I actually believed. People responded. The
+                        conversations that followed were honest and direct. I made decisions I was not
+                        always certain about, resolved conflicts I had never been trained for, and learned
+                        to communicate in a way that no CS course had prepared me for.
+                    </p>
+                    <br />
+                    <p>
+                        Looking back, it is one of the best choices I made throughout my time at Hopkins.
+                        What I learned was specific: bold decisions, even imperfect ones, create momentum.
+                        Hesitation creates silence. And in a leadership role, silence is the thing that
+                        actually costs you the trust of the people you are supposed to lead.
+                    </p>
+                    <br />
+                    <p>
+                        The connection to improv is clear. According to the UCB Manual,
+                        &quot;commitment is good acting&quot; and a long form improviser is expected
+                        to invest in the reality of the scene so fully that the audience no longer sees
+                        an improviser, but a believable character{" "}
+                        <span className="text-[#f0a04b] text-sm italic">(UCB Manual, p. 48)</span>.
+                        That first executive board meeting demanded exactly that. The room was not
+                        looking for a perfect president. They were looking for someone who believed
+                        in what they were saying enough to commit to it. The moment I stopped
+                        performing confidence and started actually investing in what I cared about,
+                        the dynamic in the room shifted. That is not a leadership trick. That is
+                        what commitment looks like when the stakes are real. Every time I now step
+                        into a scene and fully inhabit a choice without hedging, I am practicing the
+                        same thing I needed most in that meeting room.
+                    </p>
+                    <br />
+                    <figure className="mb-4">
+                        <Image
+                            src="/images/improv/ksa_group_photo.png"
+                            alt="KSA group photo at Johns Hopkins University"
+                            width={400}
+                            height={300}
+                            className="rounded-2xl w-full max-w-sm object-cover"
+                        />
+                        <figcaption className="text-xs text-gray-400 dark:text-gray-500 mt-2 italic">
+                            The Korean Students Association at Johns Hopkins. Leading this community
+                            was the boldest choice I made in college.
                         </figcaption>
                     </figure>
                 </div>
@@ -200,64 +252,72 @@ export default function Blog2() {
                 {/* Prompt 4 */}
                 <div>
                     <h2 className="text-2xl text-[#f0a04b] mb-2">
-                        A Risk in Class: Making the Weird Choice
+                        A Risk in Class: The Game I Invented
                     </h2>
                     <p>
-                        For most of the first few weeks, I played it safe. I accepted offers. I built on what
-                        my partner gave me. I was technically doing improv correctly — but I wasn&apos;t really
-                        risking anything. I was doing the improv equivalent of running a working program
-                        and never shipping it.
+                        At some point in class, we had an opportunity to create our own improv game.
+                        I came up with one: a prosecutor and two or three witnesses. The witnesses
+                        privately decide on a case, something that happened, a crime, an incident,
+                        an event. The prosecutor knows nothing. Their only tool is questions. Through
+                        interrogating the witnesses one by one, they have to piece together what
+                        the case actually is.
                     </p>
                     <br />
                     <p>
-                        The risk came during a warm-up exercise where we had to establish a scene with a
-                        single physical action. Most people did something obvious — washing dishes, typing
-                        on a keyboard. When it was my turn, I had the urge to do something equally
-                        recognizable. Instead, I paused, and then started slowly, deliberately tying a knot
-                        in something invisible, with a kind of reverence, like it mattered enormously.
-                        I had no idea what the scene was. I just committed to the energy.
+                        Designing the game felt easy. Showing it to the class did not.
+                        The risk was not in the rules. The risk was in wanting everyone to actually
+                        enjoy it. I care about that more than I usually admit. I am the kind of person
+                        who will spend twice as long on something if I think it will land better for
+                        the people on the receiving end. So when I stood up to demo the game and
+                        watched the room during those first few moments, I was reading every face.
+                        A pause too long, an uncertain look, a slow response from a volunteer, and
+                        my brain immediately went to: this is not working.
                     </p>
                     <br />
                     <p>
-                        My partner walked in, read the room, and said, &quot;Is it ready? The ceremony starts at sundown.&quot;
-                        We were suddenly in the middle of something ancient and ceremonial, and the scene that
-                        followed was one of the most genuinely interesting ones I&apos;d been part of.
+                        That internal spiral is the exact thing improv is designed to break. Presence
+                        means staying in the room, not living inside your own evaluation of how the
+                        room is responding. The game was still unfolding. The witnesses were still
+                        building the case. The prosecutor was still asking questions. But I had
+                        already started second-guessing, already started mentally apologizing for
+                        something that had not failed yet.
                     </p>
                     <br />
                     <p>
-                        What made that moment feel risky was that I chose specificity over safety. The weird
-                        choice is riskier than the obvious one because it creates more room for failure — your
-                        partner might not pick it up, the scene might collapse, you might look strange.
-                        But it also creates more room for something genuinely unexpected to happen.
+                        It did not fail. When the round finished and people started talking, it
+                        turned out others genuinely enjoyed it. The uncertainty I felt during the demo
+                        was entirely mine. The room was fine. I was the one who had not accepted the
+                        offer of the moment.
                     </p>
                     <br />
                     <p>
-                        That lesson translates directly. In academic presentations, in startup pitches, in
-                        engineering design reviews — the safe, expected framing almost never gets remembered.
-                        The specific, slightly unexpected angle is what makes people pay attention.
-                        Research on creative risk-taking in professional contexts confirms this: people who
-                        practice tolerating ambiguous outcomes — what psychologists call
-                        &quot;uncertainty tolerance&quot; — demonstrate greater innovation and resilience in
-                        high-stakes environments
+                        That experience translates directly to any situation where the outcome is
+                        uncertain and other people are involved. Presenting a project proposal,
+                        pitching a new feature to a team, leading a meeting where you are not sure
+                        the agenda is landing. The instinct to read every face and catastrophize is
+                        the same instinct I had during that demo. Research on psychological flexibility
+                        shows that people who tolerate uncertain outcomes without collapsing into
+                        avoidance perform better and recover faster in high-stakes professional situations
                         <sup className="text-[#f0a04b] font-semibold ml-0.5">
                             <a href="#cite-3">3</a>
                         </sup>.
-                        Improv is a low-stakes lab for building exactly that tolerance.
-                        Every weird choice I make in class is one more data point that
-                        says: you tried something uncertain, and the world didn&apos;t end.
+                        What improv gives you is practice staying present while the outcome is still
+                        unknown. That is exactly what the classroom risk of putting my game in front of
+                        everyone taught me. You cannot know if something works until it finishes. Stay
+                        in the scene.
                     </p>
                     <br />
                     <figure className="mb-4">
                         <Image
-                            src="/images/improv/present.jpg"
-                            alt="Offering something without knowing how it will be received — in improv and in life"
+                            src="/images/improv/phoenixwright.webp"
+                            alt="Phoenix Wright: Ace Attorney, the inspiration for the prosecutor and witness game"
                             width={300}
                             height={200}
                             className="rounded-2xl w-full max-w-xs object-cover"
                         />
                         <figcaption className="text-xs text-gray-400 dark:text-gray-500 mt-2 italic">
-                            The weird choice is a gift you offer before you know if it will land.
-                            That&apos;s the risk. That&apos;s also the point.
+                            The game was inspired by Phoenix Wright: Ace Attorney. A prosecutor,
+                            witnesses, and a mystery to unravel through questions alone.
                         </figcaption>
                     </figure>
                 </div>
@@ -274,14 +334,14 @@ export default function Blog2() {
                     <li id="cite-1">
                         Besser, M., Roberts, I., &amp; Walsh, M. (2013).{" "}
                         <em>The Upright Citizens Brigade Comedy Improvisation Manual.</em>{" "}
-                        Comedy Council of Nicea LLC. (UCB Manual, p. 52)
+                        Comedy Council of Nicea LLC. (UCB Manual, p. 48)
                     </li>
                     <li id="cite-2">
                         Cañas, J. J., Quesada, J. F., Antolí, A., &amp; Fajardo, I. (2003). &quot;Cognitive flexibility
                         and adaptability to environmental changes in dynamic complex problem-solving tasks.&quot;{" "}
                         <em>Ergonomics, 46</em>(5), 482–501.{" "}
                         <a
-                            href="https://www.tandfonline.com/doi/abs/10.1080/0014013031000061306"
+                            href="https://www.researchgate.net/publication/10760618_Cognitive_flexibility_and_adaptability_to_environmental_changes_in_dynamic_complex_problem-solving_tasks"
                             className="text-[#f0a04b] underline hover:text-[#d4883e]"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -294,7 +354,7 @@ export default function Blog2() {
                         fundamental aspect of health.&quot;{" "}
                         <em>Clinical Psychology Review, 30</em>(7), 865–878.{" "}
                         <a
-                            href="https://www.sciencedirect.com/science/article/abs/pii/S0272735810000978"
+                            href="https://www.sciencedirect.com/science/article/abs/pii/S0272735810000413"
                             className="text-[#f0a04b] underline hover:text-[#d4883e]"
                             target="_blank"
                             rel="noopener noreferrer"
