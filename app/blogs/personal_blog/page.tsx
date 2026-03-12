@@ -191,6 +191,19 @@ export default function PersonalBlog() {
 							</ComesInGoesOutUnderline>
 						</Link>
 					</li>
+					<li>
+						<Link
+							href="/blogs/personal_blog/blog_2"
+							className="group flex items-center gap-3 text-gray-700 dark:text-gray-300 hover:text-[#f0a04b] dark:hover:text-[#f0a04b] transition-colors duration-200"
+						>
+							<span className="text-[#f0a04b] font-semibold text-sm">
+								02
+							</span>
+							<ComesInGoesOutUnderline>
+								Risk and Flexibility
+							</ComesInGoesOutUnderline>
+						</Link>
+					</li>
 				</ul>
 			</div>
 		</div>
