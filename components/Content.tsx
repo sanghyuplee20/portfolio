@@ -43,93 +43,21 @@ export default function Content() {
 
 		const observer = new IntersectionObserver(
 			(entries) => {
-				const intersectingEntries = entries
-					.filter((entry) => entry.isIntersecting)
-					.map((entry) => {
-						const rect = entry.boundingClientRect;
-						return {
-							entry,
-							id: (entry.target as HTMLElement).id,
-							top: rect.top,
-							topVisibility:
-								rect.top <= 0
-									? 1
-									: Math.max(
-											0,
-											1 - rect.top / window.innerHeight
-									  ),
-						};
-					})
-					.sort((a, b) => {
-						if (a.top <= 0 && b.top > 0) return -1;
-						if (b.top <= 0 && a.top > 0) return 1;
-
-						return a.top - b.top;
-					});
-
-				if (intersectingEntries.length > 0) {
-					const newActiveId = intersectingEntries[0].id;
-					setActiveSection(newActiveId);
-				} else {
-					const fallbackSection = sections
-						.map((section) => {
-							const rect = section.getBoundingClientRect();
-							return {
-								id: section.id,
-								top: rect.top,
-								bottom: rect.bottom,
-							};
-						})
-						.sort((a, b) => {
-							if (a.top <= 0 && b.top <= 0) {
-								return b.top - a.top;
-							}
-							if (a.top <= 0 && b.top > 0) return -1;
-							if (b.top <= 0 && a.top > 0) return 1;
-							return a.top - b.top;
-						})[0];
-
-					if (fallbackSection) {
-						setActiveSection(fallbackSection.id);
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						setActiveSection((entry.target as HTMLElement).id);
 					}
-				}
+				});
 			},
 			{
-				root: null,
-				rootMargin: "-10% 0px -70% 0px",
-				threshold: [0, 0.1, 0.25, 0.5, 1.0],
+				rootMargin: "-20% 0px -70% 0px",
+				threshold: 0,
 			}
 		);
 
 		sections.forEach((section) => observer.observe(section));
 
-		const initializeActiveSection = () => {
-			const initialSection = sections
-				.map((section) => {
-					const rect = section.getBoundingClientRect();
-					return {
-						id: section.id,
-						top: rect.top,
-					};
-				})
-				.sort((a, b) => {
-					if (a.top <= 0 && b.top <= 0) return b.top - a.top;
-					if (a.top <= 0 && b.top > 0) return -1;
-					if (b.top <= 0 && a.top > 0) return 1;
-					return a.top - b.top;
-				})[0];
-
-			if (initialSection) {
-				setActiveSection(initialSection.id);
-			}
-		};
-
-		const timeoutId = setTimeout(initializeActiveSection, 100);
-
-		return () => {
-			observer.disconnect();
-			clearTimeout(timeoutId);
-		};
+		return () => observer.disconnect();
 	}, []);
 
 	// Dark mode
@@ -350,10 +278,8 @@ export default function Content() {
 	const scrollToSection = (href: string) => {
 		const element = document.querySelector(href);
 		if (element) {
-			element.scrollIntoView({
-				behavior: "smooth",
-				block: "start",
-			});
+			const offset = element.getBoundingClientRect().top + window.scrollY - 32;
+			window.scrollTo({ top: offset, behavior: "smooth" });
 		}
 	};
 
